@@ -1,13 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="/public/assets/images/logo.svg"
+        />
+        <link rel="stylesheet" href="src/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+        <div class="container" id="app">
+            <header class="header">
+                <img src="public/assets/images/logo.svg" alt="logo" />
+                <h1 class="header__title">Body Mass Index Calculator</h1>
+                <p class="header__description">
+                    Better understand your weight in relation to your height
+                    using our body mass index (BM) calculator. While BMI is not
+                    the sole determinant of a healthy weight, it offers a
+                    valuable starting point to evaluate your overall health and
+                    well-being.
+                </p>
+            </header>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
