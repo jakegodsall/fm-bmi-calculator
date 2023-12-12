@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
+/* Global Styles */
+
 :root {
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -20,6 +22,7 @@ html {
 body {
     margin: 0;
     font-size: 1.6rem;
+    color: var(--gunmetal);
 }
 
 h1,
@@ -33,9 +36,21 @@ p {
     padding: 0;
 }
 
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
 .container {
     padding: 0 2.4rem;
 }
+
+/* Header */
 
 .header {
     padding-top: 3.2rem;
@@ -53,5 +68,54 @@ p {
 .header__description {
     font-size: 1.6rem;
     line-height: 150%;
+    color: var(--dark-electric-blue);
+}
+
+/* Limitations Section */
+
+.limitations {
+    text-align: center;
+    padding-top: 7.2rem;
+    padding-bottom: 9.6rem;
+}
+
+.limitations__header {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.limitations__description {
+    color: var(--dark-electric-blue);
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-bottom: 5.6rem;
+}
+
+.limitations__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.limitations__listItem {
+    text-align: start;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+}
+
+.limitations__listItemHeader {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.limitations__listItem h3 {
+    font-size: 2rem;
+}
+
+.limitations__listItem p {
     color: var(--dark-electric-blue);
 }
