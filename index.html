@@ -25,6 +25,50 @@
                 </p>
             </header>
 
+            <div class="bmiForm">
+                <form>
+                    <h3>Enter your details below</h3>
+                    <div class="bmiForm__radioRow">
+                        <div>
+                            <input
+                                type="radio"
+                                name="measurement"
+                                id="metric"
+                            />
+                            <label for="metric">Metric</label>
+                        </div>
+                        <div>
+                            <input
+                                type="radio"
+                                name="measurement"
+                                id="imperial"
+                            />
+                            <label for="imperial">Imperial</label>
+                        </div>
+                    </div>
+                    <div class="bmiForm__row">
+                        <label for="height-cm">Height</label>
+                        <input type="text" name="height-cm" id="height-cm" />
+                    </div>
+                    <div class="bmiForm__row">
+                        <label for="weight-kg">Weight</label>
+                        <input type="text" name="weight-kg" id="weight-kg" />
+                    </div>
+                </form>
+                <div class="bmiForm__calculatedSection">
+                    <div>
+                        <p class="bmiForm__calculatedSectionTitle">
+                            Your BMI is...
+                        </p>
+                        <p class="bmiForm__calculatedSectionValue">23.4</p>
+                    </div>
+                    <p class="bmiForm__calculatedSectionDescription">
+                        Your BMI suggests you're a healthy weight. Your ideal
+                        weight is between <span>63.3kgs - 85.2kgs</span>.
+                    </p>
+                </div>
+            </div>
+
             <section class="explanation">
                 <img
                     src="/public/assets/images/image-man-eating.webp"

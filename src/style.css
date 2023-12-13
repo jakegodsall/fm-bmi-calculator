@@ -73,6 +73,96 @@ li {
     color: var(--dark-electric-blue);
 }
 
+/* Form Section */
+
+.bmiForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-inline: 2.4rem;
+    padding: 2.4rem;
+    border-radius: 16px;
+    background: var(--Pure-White, #fff);
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+    margin-bottom: 7.2rem;
+}
+
+.bmiForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.bmiForm h3 {
+    font-size: 2.4rem;
+}
+
+.bmiForm__radioRow {
+    width: 100%;
+    display: flex;
+    gap: 5.3rem;
+}
+
+.bmiForm__radioRow label {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.bmiForm__row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.bmiForm__row label {
+    color: var(--dark-electric-blue);
+    font-size: 1.4rem;
+}
+
+.bmiForm__row input {
+    padding: 2rem 2.4rem;
+    border-radius: 1.2rem;
+    outline: none;
+    border: 1px solid #d8e2e7;
+    font-size: 2.4rem;
+}
+
+.bmiForm__calculatedSection {
+    background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+    border-radius: 1.6rem;
+    color: #fff;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.bmiForm__calculatedSection div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-weight: 600;
+}
+
+.bmiForm__calculatedSectionTitle {
+    font-size: 1.6rem;
+}
+
+.bmiForm__calculatedSectionValue {
+    font-size: 4.8rem;
+}
+
+.bmiForm__calculatedSectionDescription {
+    font-size: 1.4rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: ;
+}
+
+bmiForm__calculatedSectionDescription span {
+    font-weight: 700;
+}
+
 /* Explanation Section */
 
 .explanation {
