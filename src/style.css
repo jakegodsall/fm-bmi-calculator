@@ -73,6 +73,33 @@ li {
     color: var(--dark-electric-blue);
 }
 
+/* Explanation Section */
+
+.explanation {
+    padding-bottom: 7.1rem;
+}
+
+.explanation img {
+    max-width: 100%;
+}
+
+.explanation div {
+    padding-top: 4.8rem;
+    padding-inline: 2.4rem;
+}
+
+.explanation h3 {
+    font-size: 3.2rem;
+    line-height: 110%;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.explanation p {
+    line-height: 150%;
+    color: var(--dark-electric-blue);
+}
+
 /* Recommendations Section */
 
 .recommendations {
