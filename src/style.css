@@ -15,6 +15,12 @@
     --light-grey: #d8e2e7;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -95,8 +101,6 @@ li {
 /* Form Section */
 
 .bmiForm {
-    /* position: relative;
-    top: -17rem; */
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -129,10 +133,20 @@ li {
     font-weight: 600;
 }
 
+.bmiForm__inputs {
+    width: 100%;
+
+    @media screen and (min-width: 480px) {
+        display: flex;
+        gap: 2.4rem;
+    }
+}
+
 .bmiForm__row {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    width: 100%;
 }
 
 .bmiForm__row label {
