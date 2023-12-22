@@ -54,7 +54,8 @@
                         </div>
                     </div>
                     <div class="bmiForm__inputs">
-                        <div class="bmiForm__row">
+                        <!-- METRIC INPUTS -->
+                        <!-- <div class="bmiForm__row">
                             <label for="height-cm">Height</label>
                             <div class="bmiForm__inputContainer">
                                 <input
@@ -74,6 +75,54 @@
                                     id="weight-kg"
                                 />
                                 <span class="bmiForm__inputUnit">kg</span>
+                            </div>
+                        </div> -->
+                        <!-- IMPERIAL INPUTS -->
+                        <div class="bmiForm__row">
+                            <label for="height-ft">Height</label>
+                            <div class="bmiForm__rowDouble">
+                                <div class="bmiForm__inputContainer">
+                                    <input
+                                        type="text"
+                                        name="height-ft"
+                                        id="height-ft"
+                                        maxlength="2"
+                                    />
+                                    <span class="bmiForm__inputUnit">ft</span>
+                                </div>
+                                <div class="bmiForm__inputContainer">
+                                    <input
+                                        type="text"
+                                        name="height-in"
+                                        id="height-in"
+                                        maxlength="2"
+                                    />
+                                    <span class="bmiForm__inputUnit">in</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bmiForm__row">
+                            <label for="weight-st">Weight</label>
+                            <div class="bmiForm__rowDouble">
+                                <div class="bmiForm__inputContainer">
+                                    <input
+                                        type="text"
+                                        name="weight-st"
+                                        id="weight-st"
+                                        maxlength="2"
+                                        pattern="\d"
+                                    />
+                                    <span class="bmiForm__inputUnit">st</span>
+                                </div>
+                                <div class="bmiForm__inputContainer">
+                                    <input
+                                        type="text"
+                                        name="weight-lbs"
+                                        id="weight-lbs"
+                                        maxlength="2"
+                                    />
+                                    <span class="bmiForm__inputUnit">lbs</span>
+                                </div>
                             </div>
                         </div>
                     </div>

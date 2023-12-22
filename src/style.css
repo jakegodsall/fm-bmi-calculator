@@ -226,6 +226,11 @@ li {
     width: 100%;
 }
 
+.bmiForm__rowDouble {
+    display: flex;
+    gap: 1.6rem;
+}
+
 .bmiForm__row label {
     color: var(--dark-electric-blue);
     font-size: 1.4rem;
@@ -234,7 +239,7 @@ li {
 .bmiForm__inputContainer {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 2rem 2.4rem;
     border-radius: 1.2rem;
     border: 1px solid #d8e2e7;
