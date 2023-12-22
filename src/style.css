@@ -209,6 +209,9 @@ li {
 
 .bmiForm__inputs {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
 
     @media screen and (min-width: 480px) {
         display: flex;
@@ -228,12 +231,26 @@ li {
     font-size: 1.4rem;
 }
 
-.bmiForm__row input {
+.bmiForm__inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
     padding: 2rem 2.4rem;
     border-radius: 1.2rem;
-    outline: none;
     border: 1px solid #d8e2e7;
+}
+
+.bmiForm__row input {
+    width: 100%;
     font-size: 2.4rem;
+    outline: none;
+    border: none;
+}
+
+.bmiForm__inputUnit {
+    color: var(--blue);
+    font-size: 2.4rem;
+    font-weight: 600;
 }
 
 .bmiForm__calculatedSection {
