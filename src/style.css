@@ -319,10 +319,22 @@ bmiForm__calculatedSectionDescription span {
 
 .explanation {
     padding-bottom: 7.1rem;
+
+    @media screen and (min-width: 740px) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .explanation img {
     max-width: 100%;
+
+    @media screen and (min-width: 740px) {
+        max-width: 36rem;
+        position: relative;
+        left: -4.5rem;
+    }
 }
 
 .explanation div {
@@ -355,6 +367,10 @@ bmiForm__calculatedSectionDescription span {
         )
     );
     padding-inline: 2rem;
+
+    @media screen and (min-width: 740px) {
+        padding-inline: 4rem;
+    }
 }
 
 .recommendations__list {
@@ -364,6 +380,9 @@ bmiForm__calculatedSectionDescription span {
 }
 
 .recommendations__listItem {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
 
 .recommendations__listItem img {
