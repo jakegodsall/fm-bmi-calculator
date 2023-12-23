@@ -425,13 +425,33 @@ bmiForm__calculatedSectionDescription span {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    @media screen and (min-width: 740px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-items: center;
+        grid-gap: 1.5rem;
+    }
 }
 
 .limitations__listItem {
+    width: 100%;
     text-align: start;
     padding: 2.4rem;
     border-radius: 1.6rem;
     box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+    @media screen and (min-width: 740px) {
+        padding: 3.2rem;
+    }
+}
+
+.limitations__listItem:nth-child(5) {
+    @media screen and (min-width: 740px) {
+        grid-column: span 2;
+        width: 50%;
+    }
 }
 
 .limitations__listItemHeader {
