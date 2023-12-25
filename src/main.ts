@@ -22,3 +22,16 @@ const heightFeet = document.getElementById("height-ft") as HTMLInputElement;
 const heightInches = document.getElementById("height-in") as HTMLInputElement;
 const weightStone = document.getElementById("weight-st") as HTMLInputElement;
 const weightLbs = document.getElementById("weight-lbs") as HTMLInputElement;
+
+function getPounds(stone: number, pounds: number): number {
+    return stone * 14 + pounds;
+}
+
+function getInches(feet: number, inches: number): number {
+    return feet * 12 + inches;
+}
+
+function calculateBmi(weight: number, height: number): number {
+    return weight / (height * height);
+}
+
