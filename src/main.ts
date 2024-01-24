@@ -2,17 +2,27 @@ const form = document.forms[0] as HTMLFormElement;
 
 // Radio buttons
 const radioButtons = document.querySelectorAll<HTMLInputElement>(
-    'input[name="measurement"]'
+  'input[name="measurement"]'
 );
 
 const selectedRadio = Array.from(radioButtons).find(
-    (rb) => rb.checked
+  (rb) => rb.checked
 ) as HTMLInputElement;
 
 radioButtons.forEach((radioButton) => {
-    radioButton.addEventListener("change", (event: Event) => {
-        console.log(event.target);
-    });
+  radioButton.addEventListener("change", (event: Event) => {
+    const target = event.target as HTMLInputElement;
+
+    const formInputsContainer = document.getElementById(
+      "bmiForm__inputs"
+    ) as HTMLElement;
+
+    if (target.id === "imperial") {
+      formInputsContainer.classList.add("imperial");
+    } else if (target.id === "metric") {
+      formInputsContainer.classList.remove("imperial");
+    }
+  });
 });
 
 // Metric fields
@@ -21,58 +31,58 @@ const weightKgInput = document.getElementById("weight-kg") as HTMLInputElement;
 
 // Imperial fields
 const heightFeetInput = document.getElementById(
-    "height-ft"
+  "height-ft"
 ) as HTMLInputElement;
 const heightInchesInput = document.getElementById(
-    "height-in"
+  "height-in"
 ) as HTMLInputElement;
 const weightStoneInput = document.getElementById(
-    "weight-st"
+  "weight-st"
 ) as HTMLInputElement;
 const weightLbsInput = document.getElementById(
-    "weight-lbs"
+  "weight-lbs"
 ) as HTMLInputElement;
 
 function getPounds(stone: number, pounds: number): number {
-    return stone * 14 + pounds;
+  return stone * 14 + pounds;
 }
 
 function getInches(feet: number, inches: number): number {
-    return feet * 12 + inches;
+  return feet * 12 + inches;
 }
 
 function calculateBmi(weight: number, height: number): number {
-    return weight / (height * height);
+  return weight / (height * height);
 }
 
 function printBMI(): number {
-    let height: number;
-    let weight: number;
+  let height: number;
+  let weight: number;
 
-    if (selectedRadio.id === "metric") {
-        height = parseFloat(heightCmInput.value);
-        weight = parseFloat(weightKgInput.value);
-    } else {
-        height = getInches(
-            parseFloat(heightFeetInput.value) * 12,
-            parseFloat(heightInchesInput.value)
-        );
-        weight = getPounds(
-            parseFloat(weightStoneInput.value) * 14,
-            parseFloat(weightLbsInput.value)
-        );
-    }
+  if (selectedRadio.id === "metric") {
+    height = parseFloat(heightCmInput.value);
+    weight = parseFloat(weightKgInput.value);
+  } else {
+    height = getInches(
+      parseFloat(heightFeetInput.value) * 12,
+      parseFloat(heightInchesInput.value)
+    );
+    weight = getPounds(
+      parseFloat(weightStoneInput.value) * 14,
+      parseFloat(weightLbsInput.value)
+    );
+  }
 
-    let bmi: number = 0;
+  let bmi: number = 0;
 
-    if (!isNaN(height) && !isNaN(weight)) {
-        bmi = calculateBmi(height, weight);
-    }
+  if (!isNaN(height) && !isNaN(weight)) {
+    bmi = calculateBmi(height, weight);
+  }
 
-    console.log("height: " + height);
-    console.log("weight: " + weight);
+  console.log("height: " + height);
+  console.log("weight: " + weight);
 
-    return bmi;
+  return bmi;
 }
 
 heightCmInput.addEventListener("change", printBMI);
