@@ -47,7 +47,7 @@ radioButtons.forEach((radioButton) => {
         "imperial-radio"
       ) as HTMLInputElement;
 
-      // Empty the metric values
+      // Empty the metric values (use setTimeout to make removal after transition in UI)
       setTimeout(() => {
         heightCmInput.value = "";
         weightKgInput.value = "";
@@ -61,7 +61,7 @@ radioButtons.forEach((radioButton) => {
         "metric-radio"
       ) as HTMLInputElement;
 
-      // Empty the imperial values
+      // Empty the imperial values (use setTimeout to make removal after transition in UI)
       setTimeout(() => {
         heightFeetInput.value = "";
         heightInchesInput.value = "";
@@ -81,29 +81,51 @@ class BMICalculator {
     return feet * 12 + inches;
   }
 
-  calculateBmi(weight: number, height: number): number {
-    return weight / (height * height);
+  calculateBmi(weight: number, height: number, metric: boolean = true): number {
+    const calc = weight / height ** 2;
+    if (metric) {
+      return calc;
+    } else {
+      return 703 * calc;
+    }
   }
 
   printBMI(): number {
-    let height: number;
-    let weight: number;
+    let height = 0;
+    let weight = 0;
+    let bmi = 0;
 
     if (selectedRadioButton.id === "metric-radio") {
-      height = parseFloat(heightCmInput.value);
-      weight = parseFloat(weightKgInput.value);
+      // Input values
+      const heightCm = parseFloat(heightCmInput.value);
+      const weightKg = parseFloat(weightKgInput.value);
 
-      console.log("height in cm: " + height);
-      console.log("weight in kg: " + weight);
+      height = heightCm / 100;
+      weight = weightKg;
+      bmi = this.calculateBmi(weight, height, true);
     } else if (selectedRadioButton.id === "imperial-radio") {
-      height = this.getInchesFromFeetAndInches(
-        parseFloat(heightFeetInput.value),
-        parseFloat(heightInchesInput.value)
-      );
-      console.log("height:" + height);
+      // Input values
+      const heightFeet = parseFloat(heightFeetInput.value);
+      const heightInches = parseFloat(heightInchesInput.value);
+      const weightStone = parseFloat(weightStoneInput.value);
+      const weightLbs = parseFloat(weightLbsInput.value);
+
+      height = this.getInchesFromFeetAndInches(heightFeet, heightInches);
+      weight = this.getPoundsFromStoneAndPounds(weightStone, weightLbs);
+      bmi = this.calculateBmi(weight, height);
     }
 
-    return 1;
+    const BMIValueElement = document.getElementById(
+      "BMIValue"
+    ) as HTMLParagraphElement;
+
+    if (!isNaN(bmi)) {
+      BMIValueElement.innerHTML = `${bmi}`;
+    } else {
+      BMIValueElement.innerHTML = "";
+    }
+
+    return bmi;
   }
 }
 
