@@ -27,7 +27,6 @@ html {
 
 body {
   margin: 0;
-  font-size: 1.6rem;
   color: var(--gunmetal);
 }
 
@@ -54,9 +53,11 @@ li {
 
 .container__topSection {
   @media screen and (min-width: 900px) {
-    height: 90vh;
+    width: 100vw;
+    height: 85vh;
     display: flex;
-    margin-bottom: 10vh;
+
+    margin-bottom: 15vh;
   }
 }
 
@@ -73,9 +74,16 @@ li {
 
   position: relative;
   padding-bottom: 4.8rem;
+}
 
-  @media screen and (min-width: 900px) {
-    background: none;
+@media screen and (min-width: 900px) {
+  .header {
+    width: 60vw;
+    max-width: 75rem;
+    height: auto;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
   }
 }
 
@@ -86,7 +94,6 @@ li {
   left: 0;
   right: 0;
   height: 64rem;
-  background: inherit;
   z-index: -1;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -94,6 +101,17 @@ li {
     --Gradient-1,
     linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
   );
+}
+
+@media screen and (min-width: 900px) {
+  .header::before {
+    height: 100%;
+    width: 70vw;
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
 }
 
 .header__content {
@@ -104,14 +122,20 @@ li {
 
 .header img {
   max-width: 4rem;
+
+  @media screen and (min-width: 900px) {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
 }
 
 .header__title {
   font-size: 4.8rem;
 
-  @media screen and (min-width: 74rem) {
-    font-size: 4rem;
-    max-width: 35rem;
+  @media screen and (min-width: 900px) {
+    font-size: 6.4rem;
+    max-width: 56.4rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -123,21 +147,35 @@ li {
 
 /* Form Section */
 
+.container__bmiForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .bmiForm {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 7.2rem;
+
   display: flex;
   flex-direction: column;
+  gap: 2.4rem;
+
   padding: 2.4rem;
+
   border-radius: 1.6rem;
   background: var(--Pure-White, #fff);
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
-  margin-bottom: 7.2rem;
-  gap: 2.4rem;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
     gap: 3.2rem;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: 20rem;
+    margin-bottom: 10rem;
   }
 }
 
@@ -147,7 +185,7 @@ li {
   gap: 2.4rem;
   overflow: hidden;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
     gap: 3.2rem;
   }
 }
@@ -310,10 +348,10 @@ li {
   flex-direction: column;
   gap: 2.4rem;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
     flex-direction: row;
-    gap: 19rem;
     align-items: center;
+    gap: 10rem;
     border-top-right-radius: 10rem;
     border-bottom-right-radius: 10rem;
   }

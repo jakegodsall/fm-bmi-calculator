@@ -22,113 +22,120 @@
             </p>
           </div>
         </header>
-        <div class="bmiForm">
-          <form>
-            <h3>Enter your details below</h3>
-            <div class="bmiForm__radioRow">
+        <div class="container__bmiForm">
+          <div class="bmiForm">
+            <form>
+              <h3>Enter your details below</h3>
+              <div class="bmiForm__radioRow">
+                <div>
+                  <div class="bmiForm__radioButtonContainer">
+                    <input
+                      type="radio"
+                      name="measurement"
+                      id="metric-radio"
+                      checked
+                    />
+                    <span class="bmiForm__radioButton"></span>
+                  </div>
+                  <label for="metric">Metric</label>
+                </div>
+                <div>
+                  <div class="bmiForm__radioButtonContainer">
+                    <input
+                      type="radio"
+                      name="measurement"
+                      id="imperial-radio"
+                    />
+                    <span class="bmiForm__radioButton"></span>
+                  </div>
+                  <label for="imperial">Imperial</label>
+                </div>
+              </div>
+              <div class="bmiForm__inputs" id="bmiForm__inputs">
+                <div class="bmiForm__metric">
+                  <!-- METRIC INPUTS -->
+                  <div class="bmiForm__row">
+                    <label for="height-cm">Height</label>
+                    <div class="bmiForm__inputContainer">
+                      <input type="number" name="height-cm" id="height-cm" />
+                      <span class="bmiForm__inputUnit">cm</span>
+                    </div>
+                  </div>
+                  <div class="bmiForm__row">
+                    <label for="weight-kg">Weight</label>
+                    <div class="bmiForm__inputContainer">
+                      <input type="number" name="weight-kg" id="weight-kg" />
+                      <span class="bmiForm__inputUnit">kg</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="bmiForm__imperial show">
+                  <!-- IMPERIAL INPUTS -->
+                  <div class="bmiForm__row">
+                    <label for="height-ft">Height</label>
+                    <div class="bmiForm__rowDouble">
+                      <div class="bmiForm__inputContainer">
+                        <input
+                          type="text"
+                          name="height-ft"
+                          id="height-ft"
+                          maxlength="2"
+                        />
+                        <span class="bmiForm__inputUnit">ft</span>
+                      </div>
+                      <div class="bmiForm__inputContainer">
+                        <input
+                          type="text"
+                          name="height-in"
+                          id="height-in"
+                          maxlength="2"
+                        />
+                        <span class="bmiForm__inputUnit">in</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bmiForm__row">
+                    <label for="weight-st">Weight</label>
+                    <div class="bmiForm__rowDouble">
+                      <div class="bmiForm__inputContainer">
+                        <input
+                          type="text"
+                          name="weight-st"
+                          id="weight-st"
+                          maxlength="2"
+                          pattern="\d"
+                        />
+                        <span class="bmiForm__inputUnit">st</span>
+                      </div>
+                      <div class="bmiForm__inputContainer">
+                        <input
+                          type="text"
+                          name="weight-lbs"
+                          id="weight-lbs"
+                          maxlength="2"
+                        />
+                        <span class="bmiForm__inputUnit">lbs</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="bmiForm__calculatedSection">
               <div>
-                <div class="bmiForm__radioButtonContainer">
-                  <input
-                    type="radio"
-                    name="measurement"
-                    id="metric-radio"
-                    checked
-                  />
-                  <span class="bmiForm__radioButton"></span>
-                </div>
-                <label for="metric">Metric</label>
+                <p class="bmiForm__calculatedSectionTitle">Your BMI is...</p>
+                <p class="bmiForm__calculatedSectionValue" id="BMIValue">
+                  23.4
+                </p>
               </div>
-              <div>
-                <div class="bmiForm__radioButtonContainer">
-                  <input type="radio" name="measurement" id="imperial-radio" />
-                  <span class="bmiForm__radioButton"></span>
-                </div>
-                <label for="imperial">Imperial</label>
-              </div>
+              <p class="bmiForm__calculatedSectionDescription">
+                Your BMI suggests you're a healthy weight. Your ideal weight is
+                between <span>63.3kgs - 85.2kgs</span>.
+              </p>
             </div>
-            <div class="bmiForm__inputs" id="bmiForm__inputs">
-              <div class="bmiForm__metric">
-                <!-- METRIC INPUTS -->
-                <div class="bmiForm__row">
-                  <label for="height-cm">Height</label>
-                  <div class="bmiForm__inputContainer">
-                    <input type="number" name="height-cm" id="height-cm" />
-                    <span class="bmiForm__inputUnit">cm</span>
-                  </div>
-                </div>
-                <div class="bmiForm__row">
-                  <label for="weight-kg">Weight</label>
-                  <div class="bmiForm__inputContainer">
-                    <input type="number" name="weight-kg" id="weight-kg" />
-                    <span class="bmiForm__inputUnit">kg</span>
-                  </div>
-                </div>
-              </div>
-              <div class="bmiForm__imperial show">
-                <!-- IMPERIAL INPUTS -->
-                <div class="bmiForm__row">
-                  <label for="height-ft">Height</label>
-                  <div class="bmiForm__rowDouble">
-                    <div class="bmiForm__inputContainer">
-                      <input
-                        type="text"
-                        name="height-ft"
-                        id="height-ft"
-                        maxlength="2"
-                      />
-                      <span class="bmiForm__inputUnit">ft</span>
-                    </div>
-                    <div class="bmiForm__inputContainer">
-                      <input
-                        type="text"
-                        name="height-in"
-                        id="height-in"
-                        maxlength="2"
-                      />
-                      <span class="bmiForm__inputUnit">in</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="bmiForm__row">
-                  <label for="weight-st">Weight</label>
-                  <div class="bmiForm__rowDouble">
-                    <div class="bmiForm__inputContainer">
-                      <input
-                        type="text"
-                        name="weight-st"
-                        id="weight-st"
-                        maxlength="2"
-                        pattern="\d"
-                      />
-                      <span class="bmiForm__inputUnit">st</span>
-                    </div>
-                    <div class="bmiForm__inputContainer">
-                      <input
-                        type="text"
-                        name="weight-lbs"
-                        id="weight-lbs"
-                        maxlength="2"
-                      />
-                      <span class="bmiForm__inputUnit">lbs</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-          <div class="bmiForm__calculatedSection">
-            <div>
-              <p class="bmiForm__calculatedSectionTitle">Your BMI is...</p>
-              <p class="bmiForm__calculatedSectionValue" id="BMIValue">23.4</p>
-            </div>
-            <p class="bmiForm__calculatedSectionDescription">
-              Your BMI suggests you're a healthy weight. Your ideal weight is
-              between <span>63.3kgs - 85.2kgs</span>.
-            </p>
           </div>
         </div>
       </div>
-
       <section class="explanation">
         <img
           src="./assets/images/image-man-eating.webp"
