@@ -171,11 +171,11 @@ li {
   box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
 
   @media screen and (min-width: 900px) {
+    max-width: 500px;
     gap: 3.2rem;
     height: auto;
     margin-bottom: 0;
-    margin-top: 20rem;
-    margin-bottom: 10rem;
+    margin: 40vh 14rem 10rem 0;
   }
 }
 
@@ -289,15 +289,31 @@ li {
     display: flex;
     gap: 2.4rem;
   }
+
+  @media screen and (min-width: 900px) {
+    height: 10rem;
+    transition: height 1s ease-in-out, transform 1s ease-in-out 1s;
+  }
 }
 
 .bmiForm__inputs.imperial {
   transform: translateX(-50%);
+
+  @media screen and (min-width: 900px) {
+    height: 19.4rem;
+  }
 }
 
 .bmiForm__metric,
 .bmiForm__imperial {
   flex: 1;
+}
+
+.bmiForm__metric {
+  @media screen and (min-width: 900px) {
+    display: flex;
+    gap: 2.4rem;
+  }
 }
 
 .bmiForm__row {
