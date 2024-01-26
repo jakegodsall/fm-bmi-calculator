@@ -54,10 +54,11 @@ li {
 .container__topSection {
   @media screen and (min-width: 900px) {
     width: 100vw;
-    height: 85vh;
+    height: 80vh;
+    max-height: 900px;
     display: flex;
 
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
   }
 }
 
@@ -133,7 +134,7 @@ li {
   font-size: 4.8rem;
 
   @media screen and (min-width: 900px) {
-    font-size: 6.4rem;
+    font-size: 6rem;
     max-width: 56.4rem;
     margin-bottom: 3.5rem;
   }
@@ -174,8 +175,8 @@ li {
     max-width: 500px;
     gap: 3.2rem;
     height: auto;
-    margin-bottom: 0;
-    margin: 40vh 14rem 10rem 0;
+    margin-right: 14rem;
+    margin-top: 20vh;
   }
 }
 
