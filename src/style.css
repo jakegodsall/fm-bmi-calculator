@@ -121,12 +121,14 @@ li {
   margin: 0 auto;
 }
 
-.header img {
-  max-width: 4rem;
+.header__image {
+  width: 4rem;
+  margin-bottom: 2.4rem;
 
   @media screen and (min-width: 900px) {
     width: 6.4rem;
     height: 6.4rem;
+    margin-bottom: 8rem;
   }
 }
 
@@ -393,7 +395,6 @@ li {
   font-size: 1.4rem;
   line-height: 150%;
   font-weight: 400;
-  color: ;
 }
 
 bmiForm__calculatedSectionDescription span {
@@ -403,38 +404,47 @@ bmiForm__calculatedSectionDescription span {
 /* Explanation Section */
 
 .explanation {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+
   padding-bottom: 7.1rem;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
     display: flex;
     align-items: center;
     width: 100%;
   }
 }
 
-.explanation img {
-  max-width: 100%;
+.explanation__image {
+  width: 100%;
+  margin-bottom: 4.8rem;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
+    flex: 1;
+
     max-width: 36rem;
     position: relative;
     left: -4.5rem;
   }
 }
 
-.explanation div {
-  padding-top: 4.8rem;
-  padding-inline: 2.4rem;
+.explanation__content {
+  @media ascreen and (min-width: 900px) {
+    flex: 1;
+  }
 }
 
-.explanation h3 {
+.explanation__title {
   font-size: 3.2rem;
   line-height: 110%;
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
 
-.explanation p {
+.explanation__description {
+  font-size: 1.6rem;
   line-height: 150%;
   color: var(--dark-electric-blue);
 }
@@ -455,6 +465,10 @@ bmiForm__calculatedSectionDescription span {
 }
 
 .recommendations__list {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -489,7 +503,13 @@ bmiForm__calculatedSectionDescription span {
   padding-inline: 2.4rem;
 }
 
-.limitations__header {
+.limitations__content {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.limitations__title {
   font-size: 3.2rem;
   font-weight: 600;
   margin-bottom: 3.2rem;
@@ -505,9 +525,9 @@ bmiForm__calculatedSectionDescription span {
 .limitations__list {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2rem;
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 900px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -548,4 +568,5 @@ bmiForm__calculatedSectionDescription span {
 
 .limitations__listItem p {
   color: var(--dark-electric-blue);
+  font-size: 1.6rem;
 }
